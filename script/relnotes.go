@@ -103,7 +103,7 @@ func generatedNotes(newVer, targetCommit, prevVer string) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	req, err := http.NewRequest(http.MethodPost, "https://api.github.com/repos/"+githubRepo+"/releases/generate-notes", bytes.NewReader(bs)) //nolint:noctx
+	req, err := http.NewRequest(http.MethodPost, "https://api.github.com/repos/"+githubRepo+"/releases/generate-notes", bytes.NewReader(bs))
 	if err != nil {
 		return "", err
 	}

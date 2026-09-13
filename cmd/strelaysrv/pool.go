@@ -31,7 +31,7 @@ func poolHandler(pool string, uri *url.URL, mapping mapping) {
 			uriCopy.String(),
 		})
 
-		resp, err := httpClient.Post(pool, "application/json", &b) //nolint:noctx
+		resp, err := httpClient.Post(pool, "application/json", &b)
 		if err != nil {
 			log.Printf("Error joining pool %v: HTTP request: %v", pool, err)
 			time.Sleep(time.Minute)
